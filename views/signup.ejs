@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/css/signup.css">
+
+<form action="/signup/redirect-login" method="post">
+    <h1>Create a new account</h1>
+    <h3 id="subheading">It's quick and easy.</h3>
+    <div id="name">
+        <input type="text" required name="firstName" placeholder="First name" autocomplete="off" autofocus>
+        <input type="text" required name="lastName" placeholder="Last name" autocomplete="off" >
+    </div>
+    <input type="email" required name="email" placeholder="Enter email" autocomplete="off" >
+    <input type="password" required name="password" placeholder="Create password">
+    <input type="password" required name="confirmPassword" placeholder="Confirm password">
+    <button type="submit">Sign Up</button>
+    <h3><a href="/" class="link">Already have an account ?</a></h3>
+</form>
