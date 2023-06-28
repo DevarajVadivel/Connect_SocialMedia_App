@@ -5,6 +5,9 @@ const controller = require('../controllers/home_controller');
 const passport = require('passport');
 
 router.get('/',passport.checkAuthentication,controller.home);
+router.post('/content',controller.getContent);
+
+
 router.get('/profile',passport.checkAuthentication,controller.profile);
 
 

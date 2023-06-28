@@ -1,3 +1,43 @@
+    <nav>
+        <div class="brand name">
+            Connect.
+        </div>
+        <div class="navList">
+            
+            <ul>
+                <% if(locals.data){ %>
+                    <li>
+                        <a href="/home">
+                            <h4>Home</h4>    
+                        </a>
+                        
+                    </li>
+                    
+                    <%} %>
 
+                    <li>
+                    <a href="">About Us</a>
+                    </li>
+
+                <% if(locals.data){ %>
+                    <li id="profile">
+                         <div class="dropdown">
+
+                             <a class="dropbtn">
+                                <i class="fas fa-user"></i>
+                                <span><%= data.user_firstName %></span>
+                            </a>
+                            <div class="dropdown-content">
+                                <a href="/home/profile">Profile</a>
+                                 <a href="">settings</a>
+                                 <a href="/sign-out">Log out</a>
+                            </div>
+                        </div>
+                   
+                    </li>
+                
+                <%} %>
+            </ul>
+        </div>
         
-    
+    </nav>

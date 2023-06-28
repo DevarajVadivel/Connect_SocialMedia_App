@@ -1,5 +1,154 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@700&family=Prompt:wght@500&family=Roboto:wght@100&display=swap');
+*{
     margin: 0;
-    text-align: center;
-    background:linear-gradient(90deg,grey,white,grey);
+    padding: 0;
+    box-sizing: border-box;
+
 }
+body{
+    height:100vh;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    position: relative;
+}
+
+nav{
+    width: 100%;
+    height: 9%;
+    background-color: rgb(20, 18, 18);
+    backdrop-filter: blur(20px);
+    z-index: 3;
+    position: absolute;
+    top:0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px 0px 10px;
+}
+
+.brand{
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: 'Belanosima', sans-serif;
+    background: linear-gradient(
+        45deg,
+        rgb(8, 131, 239),
+        rgb(251, 249, 249),
+        rgba(245, 245, 9, 0.998)
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 0.2px rgb(46, 43, 43);
+    
+}
+
+.navList{
+width: auto;   
+
+}
+
+.navList ul{
+    /* background-color: beige; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:20px;
+    padding-right: 10px;
+    list-style: none;
+   
+}
+
+/* 
+.navList ul:hover{
+    filter: blur(1px);
+}
+ */
+.navList ul li > a{
+    
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.2s;
+    /* padding: 15px; */
+    
+}
+
+.navList ul li:hover{
+
+    transform:scale(1.03);
+
+}
+
+
+.navList ul li a:hover{
+
+    text-decoration: underline;
+    cursor: pointer;
+    color: lightblue;  
+
+}
+
+
+
+
+/* ______dropdown nabar_____ */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    /* background-color: red; */
+    padding: 13px 0px 0px 0px;
+    height: 50px;
+  }
+
+  .dropdown:hover{
+    color: lightblue;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    margin-top: 11px;
+    left: 0; 
+    background-color: #0e0c0c;
+    width: 100px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
+    border-radius: 0px 0px 10px 10px ;
+    
+  }
+  
+  .dropdown-content > a{
+   
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgba(241, 241, 241, 0.2);
+    text-decoration: underline;
+}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+  
+  .dropbtn i{
+    font-size: 1rem;
+    margin-right: 5px   ;
+  }
+  

@@ -1,4 +1,45 @@
-<h1> Hey <%= data.user_firstName %> <br> Welcome to Connect.!</h1>
-<h4>connecting emotions!</h4>
+<link rel="stylesheet" href="/css/home.css">
 
-<a href="/home/profile"><h3>Profile Section</h3></a>
+<main>
+<!-- ----important links--- -->
+    <section id="links-section">
+
+    </section>
+
+<!-- ----feeds---- -->
+    <section id="main-feeds">
+
+        <div id="createPost">
+            <form action="/home/content" method="post">
+                <textarea name="content" cols="30" rows="3" placeholder="Create post"></textarea>
+                <button type="submit"> Post </button>
+
+            </form>
+        </div>
+        <div id="feeds">
+        <% for(let posts of post){ %>
+        <div class="posts-card">
+            <div class="profile">
+                <h4>username</h4>
+                <i class="fa-solid fa-ellipsis-vertical">
+                    <div class="list">delete</div>
+                </i>
+            </div>
+            <div class="post">
+                <%= posts.content %>
+            </div>
+            <div class="like-commemt-section">
+                <div><i class="fa-regular fa-heart"></i></div>
+                <div><i class="fa-regular fa-comment"></i></div>
+                <div><i class="fa-solid fa-share-nodes"></i></div>
+            </div>
+        </div>
+        <% } %>
+    </div>
+    </section>
+
+<!-- ---- DM or chatbox--- -->
+    <section id="chatbox">
+
+    </section>
+</main>

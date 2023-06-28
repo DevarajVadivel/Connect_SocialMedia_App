@@ -1,0 +1,212 @@
+*{
+    box-sizing: border-box;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    background-color:black;
+    /* margin-top: 100px; */
+    border: 1px solid black;
+    display: flex;
+    gap:5px;
+
+}
+/* --------link section------------- */
+#links-section{
+    height: 100%;
+    width: 25%;
+    background-color: lightblue;
+}
+
+/* ----------feed section ---------- */
+#main-feeds{
+    height: 100%;
+    width: 50%;
+    background-color:rgba(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  
+   
+    /* box-shadow: 5px 5px 4px 4px rgb(0, 0, 0); */
+}
+::-webkit-scrollbar{
+    scroll-snap-type: none;
+}
+    
+#createPost{
+
+    width: 95%;
+    height: 10%;
+    box-shadow: 0px 5px 8px 5px rgba(0, 0, 0, 0.501) ;
+    margin-top: 60px;
+    border-radius: 10px;
+    /* margin-left: 15px; */
+    /* background-color: aliceblue; */
+    /* position: fixed; */
+}
+
+#createPost form{
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+#createPost form textarea{
+    height: 95%;
+    width: 80%;
+    padding: 10px;
+    border: none;
+    font-size: 1.1em;
+    font-family: sans-serif;
+}
+#createPost form textarea:focus{
+    border: none;
+    outline: none;
+}
+
+#createPost form button{
+
+    height: 30px;
+    width:70px;
+    background-color: rgba(0, 128, 0, 0.543);
+    border-radius: 10px;
+    border: none;
+    font-size: medium;
+    font-weight: 600;
+    color: white;
+    box-shadow: 3px 6px 5px 0.5px rgba(0, 0, 0, 0.506);
+    transition: all 0.1s;
+}
+
+#createPost form button:hover{
+    transform: scale(.9);
+    box-shadow: 0px 0px 2px 2px green;
+    cursor: pointer;
+}
+/* ___________post card _________________ */
+
+#feeds{
+    height: 79%;
+    width: 95%;
+    overflow-y: scroll;
+    /* border: 1px solid black; */
+}
+.posts-card{
+    width: 97%;
+    height: auto;
+    /* background-color:black; */
+    margin-top: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-shadow: 0px 5px 6px 2px rgba(0, 0, 0, 0.3);
+    margin-left: 15px;
+    margin-bottom: 10px;
+    padding-bottom: 0px;
+    
+}
+
+.profile{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+.profile i{
+    position: relative;
+    cursor: pointer;
+}
+.list{
+    position: absolute;
+    display: none;
+    height: 25px;
+    width: 70px;
+    font-size: .7em;
+    background-color: black;
+    color: white;
+    left: -60px;
+   
+}
+.profile i:hover .list{
+    display: block;
+}
+
+.post{
+    height: 70%;
+    width: 95%;
+    /* background-color: azure; */
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    border-bottom: 1px solid black;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.like-commemt-section{
+    display: flex;
+    width: 96%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    /* margin-top: 10px;     */
+    background-color:white
+    
+
+}
+
+.like-commemt-section div{
+    width: 33%;
+    height:100%;
+    /* background-color: rgb(8, 125, 227); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-top-left-radius: 10px; */
+    border-bottom-left-radius: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.like-commemt-section div:nth-child(3){
+    border-radius: 0px;
+    /* border-top-right-radius: 10px; */
+    border-bottom-right-radius: 10px;
+}
+
+.like-commemt-section div:nth-child(2){
+
+    /* border-right:1px solid black;
+    border-left: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    border-radius: 0px;
+}
+.like-commemt-section div:hover{
+    background-color:lightblue ;
+}
+
+
+
+
+
+
+
+/* ----------chatbox------------- */
+#chatbox{
+    height: 100%;
+    width: 25%;
+    background-color: yellow;
+}
