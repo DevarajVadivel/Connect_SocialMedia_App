@@ -17,7 +17,9 @@ router.get('/back',controller.back);
 
 
 router.use('/signup',require('./signup'));
-router.use('/home',require('./home'))
+router.use('/home',require('./home'));
+router.use('/post',require('./posts'));
+router.use('/comment',require('./comments'));
 
 
 module.exports = router;

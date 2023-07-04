@@ -1,0 +1,49 @@
+<div class="posts-card">
+    <!-- ----card header---- -->
+    <div class="profile">
+        <div class="UserName">
+            <i class="fa-solid fa-user"></i>
+            <h4><%= posts.user.user_firstName %></h4>
+        </div>
+            <i class="fa-solid fa-ellipsis-vertical">
+            <% if(locals.data && locals.data.id == posts.user.id){ %>   
+            <div class="list"><a href="/post/destroy/<%= posts.id %>">Delete</a></div>
+            <% } %> 
+        </i>
+    </div>
+    <!-- -----card content ------ -->
+    <div class="post">
+        <%= posts.content %>    
+    </div>
+    <!-- --------Likes & comment & share details------- -->
+    <div class="like-commemt-section">
+        <div><i class="fa-regular fa-heart"></i><span>likes</span></div>
+        <div><i class="fa-regular fa-comment"></i><span><%= posts.comments.length %> comments</span></div>
+        <div><i class="fa-regular fa-paper-plane"></i><span>shares</span></div>
+    </div>
+
+    <!-- -----comments-------- -->
+    <div class="comments" >
+        
+        <% for (let comment of posts.comments){ %>
+            <div class="comments_inside">
+                <h5><%= comment.user.user_firstName %></h5>
+                <p><%= comment.content %></p>
+                <a href="/comment/destroy/<%= comment.id %>"><i class="fa-regular fa-circle-xmark"></i></a> 
+            </div>
+        <% } %>
+    
+    </div>
+    <!-- --------user commenting section---- -->
+
+    <form class="commentSection" action="/comment" method="post">
+        <i class="fa-solid fa-user"></i>
+        <textarea placeholder="Add a comment.." name="comment" class="writeComment" rows="1"></textarea>
+        <input type="hidden" name="post_id" value="<%= posts._id %>">
+        <button type="submit" class="sendButton">Send</button>
+        <div class="viewAllComments"></div>
+
+
+    </form>
+
+</div>

@@ -4,7 +4,7 @@ module.exports.login = function(req,res){
 
     if(req.isAuthenticated()){
 
-        return res.redirect('home');
+        return res.redirect('/home');
     }
    
     return res.render('login');

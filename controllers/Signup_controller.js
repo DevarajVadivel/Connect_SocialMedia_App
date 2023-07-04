@@ -10,12 +10,12 @@ module.exports.signup = function(req,res){
    
 }
 
-module.exports.getData =async function(req,res){
+module.exports.getData = async function(req,res){
     
     if(req.body.password == req.body.confirmPassword){
 
         let userData = await signupModel.findOne({user_email:req.body.email});
-            console.log(userData);
+            // console.log(userData);
             if(!userData){
                 signupModel.create({
 

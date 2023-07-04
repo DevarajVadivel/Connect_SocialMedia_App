@@ -8,6 +8,7 @@ const expresslayouts = require('express-ejs-layouts');
 const cookieParser = require('cookie-parser');
 const db = require('./config/mongoose');
 const  signupSchema = require('./model/Signup_Schema');
+const postSchema = require('./model/Post_Schema');
 //used for session cookie
 const session = require('express-session');
 const passport = require('passport');
